@@ -15,7 +15,40 @@ return {
       require("tokyonight").setup(opts) -- opts here are passed from above
       local colors = require("tokyonight.colors").setup({})
       vim.cmd("highlight WinSeparator guifg=" .. colors.bg_highlight)
-      vim.cmd([[colorscheme tokyonight]])
+
     end,
   },
+  {
+    "EdenEast/nightfox.nvim",
+  },
+  {
+    "shaunsingh/seoul256.nvim",
+  },
+  {
+    "Mofiqul/vscode.nvim"
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      undercurl = true,
+      underline = true,
+      bold = true,
+      italic = false,
+      strikethrough = true,
+      invert_selection = false,
+      invert_signs = false,
+      invert_tabline = false,
+      invert_intend_guides = false,
+      inverse = true, -- invert background for search, diffs, statuslines and errors
+      contrast = "hard", -- can be "hard", "soft" or empty string
+      palette_overrides = {},
+      overrides = {},
+      dim_inactive = false,
+      transparent_mode = false,
+    },
+    config = function(_, opts)
+      require("gruvbox").setup(opts)
+      vim.cmd([[colorscheme gruvbox]])
+    end
+  }
 }

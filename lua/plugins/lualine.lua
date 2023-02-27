@@ -7,7 +7,7 @@ return {
         components_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {},
-        theme = "tokyonight",
+        theme = "gruvbox",
         globalstatus = true,
       },
       sections = {

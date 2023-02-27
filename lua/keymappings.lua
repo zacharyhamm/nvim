@@ -17,36 +17,18 @@ local border_options = { float = { border = "rounded" } }
 -- NOTE<cmd> <leader> prefixed mappings are in whichkey-settings.lua
 
 local mappings = {
-  i = {
-    -- Insert mode
-    { "kk", "<ESC>" },
-    { "jj", "<ESC>" },
-    { "jk", "<ESC>" },
-    -- Terminal window navigation
-    { "<C-h>", "<C-\\><C-N><C-w>h" },
-    { "<C-j>", "<C-\\><C-N><C-w>j" },
-    { "<C-k>", "<C-\\><C-N><C-w>k" },
-    { "<C-l>", "<C-\\><C-N><C-w>l" },
-    -- moving text
-    { "<C-j>", "<esc><cmd>m .+1<CR>==" },
-    { "<C-k>", "<esc><cmd>m .-2<CR>==" },
-    -- Ctrl single quote for backtick
-    { "<C-'>", "``<esc>i" },
-  },
   n = {
     -- Normal mode
-    -- Better window movement
-    { "<C-h>", "<C-w>h", { silent = true } },
-    { "<C-j>", "<C-w>j", { silent = true } },
-    { "<C-k>", "<C-w>k", { silent = true } },
-    { "<C-l>", "<C-w>l", { silent = true } },
     -- Resize with arrows
     { "<C-Up>", "<cmd>resize -2<CR>", { silent = true } },
     { "<C-Down>", "<cmd>resize +2<CR>", { silent = true } },
     { "<C-Left>", "<cmd>vertical resize -2<CR>", { silent = true } },
     { "<C-Right>", "<cmd>vertical resize +2<CR>", { silent = true } },
     -- Ctrl + p fuzzy files
-    { "<C-p>", telescope_find_files },
+    { "<C-p>f", telescope_find_files },
+    { "<C-p>b", "<cmd>Telescope buffers<CR>" },
+    { "<C-p>g", "<cmd>Telescope live_grep<CR>" },
+    { "<C-p>a", "<cmd>NvimTreeToggle <CR>" },
     -- escape clears highlighting
     { "<esc>", "<cmd>noh<cr><esc>" },
     -- hop words
@@ -83,17 +65,6 @@ local mappings = {
     { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
     -- open link under cursor
     { "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>' },
-  },
-  t = {
-    -- Terminal mode
-    -- Terminal window navigation
-    { "<C-h>", "<C-\\><C-N><C-w>h" },
-    { "<C-j>", "<C-\\><C-N><C-w>j" },
-    { "<C-k>", "<C-\\><C-N><C-w>k" },
-    { "<C-l>", "<C-\\><C-N><C-w>l" },
-    -- map escape to normal mode in terminal
-    { "<Esc>", [[ <C-\><C-n> ]] },
-    { "jj", [[ <C-\><C-n> ]] },
   },
   v = {
     -- Visual/Select mode
