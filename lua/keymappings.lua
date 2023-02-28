@@ -65,6 +65,7 @@ local mappings = {
     { "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true } },
     -- open link under cursor
     { "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>' },
+    { "<C-t>n", "<cmd>tabnew<CR>"}
   },
   v = {
     -- Visual/Select mode

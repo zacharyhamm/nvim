@@ -10,7 +10,6 @@ return {
   "windwp/nvim-spectre", -- Spectre for find and replace
   "mhartington/formatter.nvim",
   "delphinus/vim-firestore",
-  "goolord/alpha-nvim",
   "andweeb/presence.nvim",
   "kyazdani42/nvim-web-devicons",
 

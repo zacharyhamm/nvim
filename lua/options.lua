@@ -33,8 +33,8 @@ vim.o.guifont = "Victor Mono Nerd Font:h11"
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
 
 -- highlight on yank
 vim.cmd([[au TextYankPost * silent! lua vim.highlight.on_yank()]])

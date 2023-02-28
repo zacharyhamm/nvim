@@ -8,7 +8,7 @@ return {
         section_separators = { left = "", right = "" },
         disabled_filetypes = {},
         theme = "gruvbox",
-        globalstatus = true,
+        globalstatus = false,
       },
       sections = {
         lualine_a = { "mode" },
