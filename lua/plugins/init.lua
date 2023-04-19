@@ -12,6 +12,7 @@ return {
   "delphinus/vim-firestore",
   "andweeb/presence.nvim",
   "kyazdani42/nvim-web-devicons",
+  "ziglang/zig.vim",
 
   -- Useful status updates for LSP
   { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } } },
