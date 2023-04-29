@@ -28,6 +28,9 @@ return {
     "Mofiqul/vscode.nvim"
   },
   {
+    "sainnhe/edge"
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     opts = {
       undercurl = true,

@@ -1,3 +1,7 @@
 require("lspconfig").rust_analyzer.setup({
-  procMacro = { enable = true }
+  settings = {
+    ['rust-analyzer'] = {
+      procMacro = { enable = true };
+    }
+  }
 })
