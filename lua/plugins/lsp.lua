@@ -1,5 +1,30 @@
 return {
   {
+    "simrat39/rust-tools.nvim",
+    config = function ()
+      require("rust-tools").setup({
+        server = {
+          settings = {
+            ['rust-analyzer'] = {
+              imports = {
+                granularity = {
+                  group = "module"
+                },
+                prefix = "self",
+              },
+              cargo = {
+                buildScripts = {
+                  enable = true,
+                }
+              },
+              procMacro = { enable = true };
+            }
+          }
+        }
+      })
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = { "folke/neodev.nvim" },
     config = function()
@@ -19,7 +44,7 @@ return {
       require("servers.prisma")
       require("servers.emmet")
       require("servers.gql")
-      require("servers.rust")
+      -- require("servers.rust")
       require("servers.go")
       require("servers.deno")
       require("servers.astro")

@@ -15,7 +15,7 @@ return {
   "ziglang/zig.vim",
 
   -- Useful status updates for LSP
-  { "j-hui/fidget.nvim", opts = { window = { border = "rounded", blend = 0 } } },
+  { "j-hui/fidget.nvim", tag = "legacy", opts = { window = { border = "rounded", blend = 0 } } },
 
   { "numToStr/Comment.nvim", opts = {} },
 --  "rmagatti/auto-session",

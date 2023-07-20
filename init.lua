@@ -33,3 +33,8 @@ vim.api.nvim_exec(
   ]],
   false
 )
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern =  { "*.ts,*.js,*.vue,*.jsx" },
+  command = "EslintFixAll"
+})
