@@ -1,5 +1,11 @@
 return {
   {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  },
+  {
     "simrat39/rust-tools.nvim",
     config = function ()
       require("rust-tools").setup({
@@ -59,10 +65,7 @@ return {
       end
 
       vim.diagnostic.config({
-        virtual_text = {
-          source = "if_many",
-          prefix = " ", -- Could be '●', '▎', 'x'
-        },
+        virtual_text = false,
         float = {
           source = "always",
         },
